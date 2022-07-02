@@ -1,0 +1,430 @@
+@font-face
+{
+    font-family: 'ubisoftsans-bold';
+  src: url('../fonts/ubisoftsans-bold.ttf') format('truetype');
+}
+@font-face
+{
+    font-family: 'ubisoftsans-regular';
+  src: url('../fonts/ubisoftsans-regular.ttf') format('truetype');
+}
+
+$s-regular: 'ubisoftsans-regular', sans-serif;
+$s-bold: 'ubisoftsans-bold', sans-serif;
+
+$pink: #e12178;
+//GLOBAL
+*{
+    box-sizing: border-box;
+    font-family: $s-regular;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+h2{
+    padding: 70px 0;
+    text-align: center;
+    font-family: $s-bold;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 22px;
+    line-height: 28px;
+}
+button{
+    width: 260px;
+    height: 54px;
+    border-radius: 30px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-family: $s-bold;
+    background: $pink;
+    cursor: pointer;
+
+}
+.hidden{
+    display: none !important;
+}
+.menu-item-selected{
+    color: black;
+    background-color: white;
+}
+//HEADER
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 50px;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    .container{
+        height: 50px;
+        margin: 0 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-svg{
+        width: 100px;
+        fill: white;
+        width: 81px;
+        height: 26px;
+    }
+}
+//NAV
+#main-nav{
+    height: 100%;
+}
+#main-nav>ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        display: flex;
+        align-items: center;
+        padding: 0 35px;
+        font-family: $s-bold;
+    }
+}
+.sub-menu{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width:calc(100% - 120px);
+    margin: 0 60px;
+    padding: 30px 80px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px 0px;
+    color: black;
+    button{
+        width: auto;
+        height: auto;
+        border: 3px solid rgb(219, 40, 127);
+        padding: 6px 22px;
+        font-size: 1em;
+        letter-spacing: 0.1em;
+    }
+    button:hover{
+        color: $pink;
+        background: white;
+        cursor: pointer;
+    }
+    ul{
+        border-top: 1px solid rgba(112, 112, 112, 0.4);
+        margin-bottom: 30px;
+    }
+    li{
+        margin-top: 15px;
+        list-style: none;
+        padding: 0 !important;
+        text-transform: none;
+    }
+    .label{
+        margin-bottom: 10px;
+        font-family: $s-bold;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: rgb(29, 30, 34);
+        font-size: 0.75em;
+    }
+    .top{
+        display: flex;
+        .menu-col{
+            width: 25%;
+            padding-right: 40px;
+        }
+        .picture{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .bot{
+        width: 60%;
+        margin: auto;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        #sub-now{
+            background: rgb(58, 126, 198);
+            border-color: rgb(58, 126, 198);
+        }
+        #sub-now:hover{
+            background: white;
+            color: rgb(58, 126, 198);
+        }
+    }
+
+}
+#shop-menu{
+    opacity:0.9
+}
+#explore-menu{
+    opacity:0.8
+}
+#help-menu{
+    opacity:0.7
+}
+
+
+//SIDE MENU
+.round-btn{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: rgb(54, 54, 54);
+    margin-right: 10px;
+    .fa-search{
+        font-size: 19px;
+        color: white;
+    }
+    .fa-user{
+        color: #d3d3d3;
+        font-size: 13px;
+        transform: scaleX(0.85);
+    }
+}
+.search-btn{
+    margin-right: 80px;
+}
+#side-menu{
+    display: flex;
+}
+#login{
+    display: flex;
+    align-items: center;
+    h4{
+        float: right;
+        margin-right: 10px;
+        font-family: $s-bold;
+        font-size: 16px;
+        color: #d3d3d3;
+    }
+}
+//SHOWCASE
+#slide-show{
+    position: relative;
+    .slide-main{
+        height: calc( 100vw * 0.5);
+        @media(max-width: 1650px){
+            height: 800px;
+        }
+        display: flex !important;
+    };
+}
+.slide-main{
+    padding: 0 1.6% 0 1.6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: top center;
+    background-size: cover;
+    color: white;
+    text-shadow: 0 2px 10px #000;
+    &>*{
+        text-align: center;
+    }
+    h1{
+        font-size: 56px;
+        font-family: $s-bold;
+        letter-spacing: 0;
+    }
+    h5{
+        margin-top: 5px;
+        font-size: 26px;
+        font-family: $s-regular;
+        font-weight: 400; 
+    }
+    .slide-buttons{
+        margin-top: 55px;
+    }
+    button{
+        margin: 0 15px;
+    }
+    .img-wraper{
+        position: absolute;
+        left:0;
+        bottom: 100px;
+        width: 100%;
+        img{
+            margin: auto;
+        }
+    }
+}
+#slide1, #slide4{
+    background-image: url('../img/showcase-bg/AFOP.jpg');
+    button{
+       background-color: rgb(1, 106, 164);
+    }
+}
+#slide2, #slide5{
+    background-image: url('../img/showcase-bg/NorthStar.jpg');
+    button{
+        background-color: rgb(0, 156, 190);
+     }
+}
+#slide3, #slide6{
+    background-image: url('../img/showcase-bg/Honor.jpg');
+    button{
+        background-color: rgb(169, 145, 89);
+     }
+}
+#slide-menu{
+    display: flex;
+    width: 100%;
+   position: absolute;
+   bottom: 27px;
+   text-transform: uppercase;
+   color: white;
+   opacity: 0.7;
+   font-size: 20px;
+   text-align: center;
+   .slick-arrow{
+        background:hsla(0,0%,100%,.15);
+        height:61px;
+        transition-property: background;
+        transition-duration: 200ms;
+        i{
+            font-size: 35px;
+            padding: 0 25px;
+            color: white;
+        }
+   }
+   .slick-arrow:hover{
+    background: hsla(0,0%,100%,.3);
+    cursor: pointer;
+   }
+   .slick-prev{
+       border-radius: 0px 30px 30px 0px;
+   }
+   .slick-next{
+    border-radius: 30px 0px 0px 30px;
+    }
+    .slick-active{
+        opacity: 0.7;
+        transition-property: opacity ;
+        transition-duration: 0.3s ;
+        transition-delay: 0s;
+    }  
+    .slick-center, .slick-clone-current{
+        opacity: 0;
+    }
+    .slick-track{
+        position: relative;
+        top: 25px;
+    } 
+}
+//MORE GAMES
+#boxes-slider{
+    //max-width: 1750px;
+    margin: 0 auto;
+    .box{
+        padding: 0 22px;
+        width:292px;
+        img{
+            width:100%;
+        }
+        h3{
+            min-height: 3.6rem;
+        }
+    }
+}
+#boxes-slider-top{
+    display: flex;
+    .slick-arrow{
+        position: relative;
+        top:400px;
+        background:rgba(229,233,234,.4);
+        height:61px;
+        transition-property: background;
+        transition-duration: 200ms;
+        i{
+            font-size: 35px;
+            padding: 0 25px;
+            color: rgb(209,205,215);
+        }
+        
+   }
+   .slick-arrow:hover{
+    background: rgba(229,233,234,.85);
+    cursor: pointer;
+    & i{
+        color: rgb(122,107,141)
+    }
+   }
+   .slick-prev{
+       border-radius: 0px 30px 30px 0px;
+   }
+   .slick-next{
+    border-radius: 30px 0px 0px 30px;
+    }
+}
+.pla-icons{
+    svg{
+        fill:rgb(153, 153, 153);
+        margin-right: 5px;
+    }
+}
+#view-all{
+    margin-top: 150px;
+    button{
+        display: block;
+        margin: auto;
+    }
+}
+@media(max-width:900px){
+    .slide-main{
+        padding: 0 0.8%;
+        justify-content: flex-end;
+        height: 150vw !important;
+        padding-bottom: 190px;
+        h1{
+            margin-top: 80px;
+            margin-bottom: 50%;
+            font-size:46px;
+            height: 200px;
+        }
+        h5{
+            height: 60px;
+            font-size:18px;
+        }
+    }
+    #slide-menu{
+        .slick-list{
+            opacity: 0;
+        }
+    }
+}
+@media(max-width:650px){
+        .slide-main{
+            .slide-buttons{
+                width: 100%;
+                button{
+                    width: 45%;
+                    height:46px;
+                    margin:0 2%;
+                    font-size: 12px;
+                    
+                }
+            }
+    }
+
+}

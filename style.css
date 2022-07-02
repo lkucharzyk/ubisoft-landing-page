@@ -1,0 +1,401 @@
+@font-face {
+  font-family: 'ubisoftsans-bold';
+  src: url("../fonts/ubisoftsans-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'ubisoftsans-regular';
+  src: url("../fonts/ubisoftsans-regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "ubisoftsans-regular", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  padding: 70px 0;
+  text-align: center;
+  font-family: "ubisoftsans-bold", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+button {
+  width: 260px;
+  height: 54px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "ubisoftsans-bold", sans-serif;
+  background: #e12178;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.menu-item-selected {
+  color: black;
+  background-color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 50px;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+}
+
+header .container {
+  height: 50px;
+  margin: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo-svg {
+  width: 100px;
+  fill: white;
+  width: 81px;
+  height: 26px;
+}
+
+#main-nav {
+  height: 100%;
+}
+
+#main-nav > ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav > ul li {
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  font-family: "ubisoftsans-bold", sans-serif;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: calc(100% - 120px);
+  margin: 0 60px;
+  padding: 30px 80px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px 0px;
+  color: black;
+}
+
+.sub-menu button {
+  width: auto;
+  height: auto;
+  border: 3px solid #db287f;
+  padding: 6px 22px;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+.sub-menu button:hover {
+  color: #e12178;
+  background: white;
+  cursor: pointer;
+}
+
+.sub-menu ul {
+  border-top: 1px solid rgba(112, 112, 112, 0.4);
+  margin-bottom: 30px;
+}
+
+.sub-menu li {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0 !important;
+  text-transform: none;
+}
+
+.sub-menu .label {
+  margin-bottom: 10px;
+  font-family: "ubisoftsans-bold", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #1d1e22;
+  font-size: 0.75em;
+}
+
+.sub-menu .top {
+  display: flex;
+}
+
+.sub-menu .top .menu-col {
+  width: 25%;
+  padding-right: 40px;
+}
+
+.sub-menu .top .picture {
+  width: 50%;
+}
+
+.sub-menu .top .picture img {
+  width: 100%;
+}
+
+.sub-menu .bot {
+  width: 60%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-menu .bot #sub-now {
+  background: #3a7ec6;
+  border-color: #3a7ec6;
+}
+
+.sub-menu .bot #sub-now:hover {
+  background: white;
+  color: #3a7ec6;
+}
+
+#shop-menu {
+  opacity: 0.9;
+}
+
+#explore-menu {
+  opacity: 0.8;
+}
+
+#help-menu {
+  opacity: 0.7;
+}
+
+.round-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #363636;
+  margin-right: 10px;
+}
+
+.round-btn .fa-search {
+  font-size: 19px;
+  color: white;
+}
+
+.round-btn .fa-user {
+  color: #d3d3d3;
+  font-size: 13px;
+  transform: scaleX(0.85);
+}
+
+.search-btn {
+  margin-right: 80px;
+}
+
+#side-menu {
+  display: flex;
+}
+
+#login {
+  display: flex;
+  align-items: center;
+}
+
+#login h4 {
+  float: right;
+  margin-right: 10px;
+  font-family: "ubisoftsans-bold", sans-serif;
+  font-size: 16px;
+  color: #d3d3d3;
+}
+
+#slide-show {
+  position: relative;
+}
+
+#slide-show .slide-main {
+  height: calc( 100vw * 0.5);
+  display: flex !important;
+}
+
+@media (max-width: 1650px) {
+  #slide-show .slide-main {
+    height: 800px;
+  }
+}
+
+.slide-main {
+  padding: 0 1.6% 0 1.6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: top center;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 2px 10px #000;
+}
+
+.slide-main > * {
+  text-align: center;
+}
+
+.slide-main h1 {
+  font-size: 56px;
+  font-family: "ubisoftsans-bold", sans-serif;
+  letter-spacing: 0;
+}
+
+.slide-main h5 {
+  margin-top: 5px;
+  font-size: 26px;
+  font-family: "ubisoftsans-regular", sans-serif;
+  font-weight: 400;
+}
+
+.slide-main .slide-buttons {
+  margin-top: 55px;
+}
+
+.slide-main button {
+  margin: 0 15px;
+}
+
+.slide-main .img-wraper {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  width: 100%;
+}
+
+.slide-main .img-wraper img {
+  margin: auto;
+}
+
+#slide1, #slide4 {
+  background-image: url("../img/showcase-bg/AFOP.jpg");
+}
+
+#slide1 button, #slide4 button {
+  background-color: #016aa4;
+}
+
+#slide2, #slide5 {
+  background-image: url("../img/showcase-bg/NorthStar.jpg");
+}
+
+#slide2 button, #slide5 button {
+  background-color: #009cbe;
+}
+
+#slide3, #slide6 {
+  background-image: url("../img/showcase-bg/Honor.jpg");
+}
+
+#slide3 button, #slide6 button {
+  background-color: #a99159;
+}
+
+#slide-menu {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 27px;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.7;
+  font-size: 20px;
+  text-align: center;
+}
+
+#slide-menu .slick-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  height: 61px;
+  transition-property: background;
+  transition-duration: 200ms;
+}
+
+#slide-menu .slick-arrow i {
+  font-size: 35px;
+  padding: 0 25px;
+  color: white;
+}
+
+#slide-menu .slick-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+#slide-menu .slick-prev {
+  border-radius: 0px 30px 30px 0px;
+}
+
+#slide-menu .slick-next {
+  border-radius: 30px 0px 0px 30px;
+}
+
+#slide-menu .slick-active {
+  opacity: 0.7;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+
+#slide-menu .slick-center, #slide-menu .slick-clone-current {
+  opacity: 0;
+}
+
+#slide-menu .slick-track {
+  position: relative;
+  top: 25px;
+}
+
+#boxes-slider {
+  max-width: 1750px;
+  margin: 0 auto;
+}
+
+#boxes-slider .box {
+  padding: 0 22px;
+  width: 292px;
+}
+
+.pla-icons {
+  margin-top: 3px;
+}
+
+.pla-icons svg {
+  fill: #999999;
+  margin-right: 5px;
+}
